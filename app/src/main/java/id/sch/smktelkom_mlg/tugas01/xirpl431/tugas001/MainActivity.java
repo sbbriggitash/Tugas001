@@ -95,7 +95,8 @@ public class MainActivity extends AppCompatActivity {
                 "Nama Lengkap Pendaftar : " + nama + "\n" +
                 "Tempat Tanggal Lahir : " + ttl + "\n" +
                 "Alamat Pendaftar : " + alamat + "\n" +
-                "Kota Pendaftar : " + kota + "\n");
+                "Kota Pendaftar : " + kota + "\n" +
+                "Jurusan Kursus Bahasa yang Dipilih : " + spJurusan.getSelectedItem().toString());
 
         String hasil = "Jenis Paket yang Anda Pilih : \n";
         int startlen = hasil.length();
@@ -119,8 +120,6 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tvHasil.setText("Jenis Kelamin Pendaftar : " + hasil);
         }
-
-        tvHasil.setText("Jurusan Kursus Bahasa yang Dipilih : " + spJurusan.getSelectedItem().toString());
     }
 
 }
