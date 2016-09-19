@@ -7,6 +7,7 @@ import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Spinner;
 import android.widget.TextView;
 
@@ -15,8 +16,9 @@ public class MainActivity extends AppCompatActivity {
     TextView tvTP, tvJP, tvNama, tvTTL, tvAlamat, tvKota, tvJK, tvJur, tvHasil;
     EditText etTP, etNama, etTTL, etAlamat, etKota;
     RadioButton rbPria, rbWanita;
-    Spinner spJur;
+    Spinner spJurusan;
     Button bOK;
+    private RadioGroup rgJP;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,8 +46,10 @@ public class MainActivity extends AppCompatActivity {
 
         rbPria = (RadioButton) findViewById(R.id.radioButtonPria);
         rbWanita = (RadioButton) findViewById(R.id.radioButtonWanita);
+        rgJP = (RadioGroup) findViewById(R.id.radioGroupJP);
 
-        spJur = (Spinner) findViewById(R.id.spinnerJur);
+        spJurusan = (Spinner) findViewById(R.id.spinnerJurusan);
+
         bOK = (Button) findViewById(R.id.buttonOK);
 
         findViewById(R.id.buttonOK).setOnClickListener(new View.OnClickListener() {
@@ -58,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void doClick() {
         String tanggal = etTP.getText().toString();
-        tvTP.setText("Tanggal Pedaftaran : " + tanggal + "\n");
+        tvTP.setText("Tanggal Pendaftaran : " + tanggal + "\n");
         if (tanggal.isEmpty()) {
             etTP.setError("Tanggal Pendaftaran Belum Diisi");
         }
@@ -86,5 +90,37 @@ public class MainActivity extends AppCompatActivity {
         if (kota.isEmpty()) {
             etKota.setError("Kota Belum Diisi");
         }
+
+        tvHasil.setText("\n\nTanggal Pendaftaran : " + tanggal + "\n" +
+                "Nama Lengkap Pendaftar : " + nama + "\n" +
+                "Tempat Tanggal Lahir : " + ttl + "\n" +
+                "Alamat Pendaftar : " + alamat + "\n" +
+                "Kota Pendaftar : " + kota + "\n");
+
+        String hasil = "Jenis Paket yang Anda Pilih : \n";
+        int startlen = hasil.length();
+        if (cbReg.isChecked()) hasil += cbReg.getText() + "\n";
+        if (cbPK.isChecked()) hasil += cbPK.getText() + "\n";
+
+        if (hasil.length() == startlen) hasil += "Tidak ada pada pilihan";
+
+        tvHasil.setText(hasil);
+
+        hasil = null;
+
+        if (rbPria.isChecked()) {
+            hasil = rbPria.getText().toString();
+        } else if (rbWanita.isChecked()) {
+            hasil = rbWanita.getText().toString();
+        }
+
+        if (hasil == null) {
+            tvHasil.setText("Belum Memilih Jenis Kelamin");
+        } else {
+            tvHasil.setText("Jenis Kelamin Pendaftar : " + hasil);
+        }
+
+        tvHasil.setText("Jurusan Kursus Bahasa yang Dipilih : " + spJurusan.getSelectedItem().toString());
     }
+
 }

@@ -135,6 +135,7 @@
             android:textStyle="bold" />
 
         <RadioGroup
+            android:id="@+id/radioGroupJP"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
 
@@ -161,9 +162,10 @@
             android:textStyle="bold" />
 
         <Spinner
-            android:id="@+id/spinnerJur"
+            android:id="@+id/spinnerJurusan"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:entries="@array/jurusan" />
 
         <Button
             android:id="@+id/buttonOK"
@@ -178,6 +180,6 @@
             android:id="@+id/textViewHasil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hasil" />
+            tools:text="Hasil" />
     </LinearLayout>
 </ScrollView>
