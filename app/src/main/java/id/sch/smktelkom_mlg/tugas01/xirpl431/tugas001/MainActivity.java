@@ -91,12 +91,6 @@ public class MainActivity extends AppCompatActivity {
             etKota.setError("Kota Belum Diisi");
         }
 
-        tvHasil.setText("\n\nTanggal Pendaftaran : " + tanggal + "\n" +
-                "Nama Lengkap Pendaftar : " + nama + "\n" +
-                "Tempat Tanggal Lahir : " + ttl + "\n" +
-                "Alamat Pendaftar : " + alamat + "\n" +
-                "Kota Pendaftar : " + kota + "\n" +
-                "Jurusan Kursus Bahasa yang Dipilih : " + spJurusan.getSelectedItem().toString());
 
         String hasil = "Jenis Paket yang Anda Pilih : \n";
         int startlen = hasil.length();
@@ -104,8 +98,6 @@ public class MainActivity extends AppCompatActivity {
         if (cbPK.isChecked()) hasil += cbPK.getText() + "\n";
 
         if (hasil.length() == startlen) hasil += "Tidak ada pada pilihan";
-
-        tvHasil.setText(hasil);
 
         hasil = null;
 
@@ -120,6 +112,17 @@ public class MainActivity extends AppCompatActivity {
         } else {
             tvHasil.setText("Jenis Kelamin Pendaftar : " + hasil);
         }
+
+        tvHasil.setText(hasil);
+
+        tvHasil.setText("\n\nTanggal Pendaftaran : " + tanggal + "\n\n" +
+                "Jenis Paket yang Dipilih : " +
+                "Nama Lengkap Pendaftar : " + nama + "\n\n" +
+                "Tempat Tanggal Lahir : " + ttl + "\n\n" +
+                "Alamat Pendaftar : " + alamat + "\n\n" +
+                "Kota Pendaftar : " + kota + "\n\n" +
+                "Jenis Kelamin Pendaftar : " + hasil + "\n\n" +
+                "Jurusan Kursus Bahasa yang Dipilih : " + spJurusan.getSelectedItem().toString());
     }
 
 }
