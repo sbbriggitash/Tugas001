@@ -1,7 +1,7 @@
 # Tugas001<br><br>
 **Aplikasi Pendaftaran Kursus Bahasa** berbentuk form dengan pilihan jenis paketnya menggunakan checkbox, tanggal pendaftaran, nama pendaftar, tempat tanggal lahir pendaftar, alamat pendaftar, serta kota tempat tinggal pendaftar. <br><br>
 **Kegunaan aplikasi** form ini adalah sebagai pendaftaran seseorang agar dapat bergabung dalam kursus secara online.<br>
-Ketika ada data yang dilewatkan/tidak diisi, maka akan muncul peringatan agar melengkapi form.<br>
+Ketika ada data yang dilewatkan/tidak diisi, maka akan muncul peringatan agar melengkapi form.<br><br>
 **Deteksi kesalahan pengisian** pada form ini akan muncul saat pengisi sengaja maupun tidak sengaja membiarkan kolom pengisian tetap kosong, sehingga pengisi harus mengisi semua kolom pengisian pada form ini.<br><br>
 - Di sana juga disediakan *radio button* untuk pemilihan gender pendaftar. <br>
 - Terdapat *checkbox* untuk pemilihan jurusan kursus bahasanya.<br>
