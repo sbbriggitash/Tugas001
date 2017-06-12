@@ -18,4 +18,4 @@ Ketika ada data yang dilewatkan/tidak diisi, maka akan muncul peringatan agar me
 ![screenshots](https://github.com/sbbriggitash/Tugas001/blob/9ec8fe3f587241a9eb8e429d27eeffd2630cbb55/Tugas001(4).PNG)<br>
 ![screenshots](https://github.com/sbbriggitash/Tugas001/blob/9ec8fe3f587241a9eb8e429d27eeffd2630cbb55/Tugas001(5).PNG)<br><br><br>
 
-## Shafhira Briggita Y._XI RPL 4_31_4836/1555.070_SMK Telkom Malang
+## Shafhira Briggita Y._XI RPL 4_31_4835/1554.070_SMK Telkom Malang
